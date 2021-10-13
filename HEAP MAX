@@ -1,0 +1,37 @@
+HEAPMAX
+import heapq
+import time
+heapmaxim=[]
+heapq.heapify(heapmaxim)
+​
+def adicionapramim(valor):
+   inicio=time.time()
+   heapq.heappush(heapmaxim,valor*-1)
+   fim=time.time()
+   print(valor,"foi adicionado no heap")
+   print("tempo:",inicio-fim)
+  
+def removeai(valor):
+   inicio=time.time()
+   heapq.heappop(heapmaxim)
+   print(valor,"removido(s) com sucesso")
+   fim=time.time()
+   print("tempo:",inicio-fim)
+
+HEAPMINI
+import heapq
+import time
+heapmini=[]
+heapq.heapify(heapmini)
+def adicionapramim(valor):
+   inicio=time.time()
+   heapq.heappush(heapmini,valor)
+   fim=time.time()
+   print(valor,"foi adicionado no heap")
+   print("tempo:",inicio-fim)
+def removeai(valor):
+   inicio=time.time()
+   heapq.heappop(heapmini)
+   print(valor,"removido(s) com sucesso")
+   fim=time.time()
+   print("tempo:",inicio-fim)
