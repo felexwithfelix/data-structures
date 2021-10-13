@@ -1,0 +1,26 @@
+import heapq
+import time
+
+HeapMin=[]
+
+print("HeapMin")
+inicio = time.time()
+for i in range(0,100000):
+  opcao = int(input("1:Adicionar\n2:Remover\n3:Stop\n4:Mostrar\n"))
+  if(opcao==1):
+   num=int(input("Digite o valor: "))
+   # adiciona
+   heapq.heappush(HeapMin, int(num))
+  elif(opcao==2):
+   # remove
+   heapq.heappop(HeapMin)
+   print(HeapMin)
+  elif(opcao==3):
+    break
+  elif(opcao==4):
+    heapq.heapify(HeapMin)
+    print(HeapMin)
+fim = time.time()
+print("Tempo:\n",fim-inicio)
+heapq.heapify(HeapMin)
+print(HeapMin)
