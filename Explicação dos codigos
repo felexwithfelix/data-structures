@@ -1,0 +1,110 @@
+HEAP MÍNIMO
+import heapq
+import time
+DECLARAÇÃO AS BIBLIOTECAS USADAS NO CÓDIGO 
+heapmini=[]
+A DECLARAÇÃO DA LISTA VAZIA
+heapq.heapify(heapmini)
+UM DOS COMANDOS QUE A BIBLIOTECA HEAPQ TEM É O HEAPIFY QUE TRANSFORMA A LISTA EM UM HEAP 
+def adicionapramim(valor):
+AQUI A DEFINIÇÃO DA FUNÇÃO DE INSERÇÃO NO HEAP
+   inicio=time.time()
+INÍCIO DA CONTAGEM DO RELÓGIO
+   heapq.heappush(heapmini,valor)
+O HEAPPUSH FUNCIONA VERIFICANDO SE O NÚMERO DE ENTRADA É MAIOR QUE O PRIMEIRO NÚMERO E FAZENDO A DEVIDA TROCA
+   fim=time.time()
+FIM DA CONTAGEM DO RELÓGIO
+   print(valor,"foi adicionado no heap")
+   print("tempo:",inicio-fim)
+def removeai(valor):
+DEFINIÇÃO DA REMOÇÃO NO HEAP
+   inicio=time.time()
+INÍCIO DA CONTAGEM DO RELÓGIO
+   heapq.heappop(heapmini)
+O HEAPPOP SIMPLESMENTE EXCLUI AQUELE QUE SE ENCONTRA NA PRIMEIRA POSIÇÃO
+   fim=time.time()
+FIM DA CONTAGEM DO RELÓGIO 
+   print(valor,"removido(s) com sucesso")
+   print("tempo:",inicio-fim)
+
+HEAP MÁXIMO
+import heapq
+import time
+DECLARAÇÃO AS BIBLIOTECAS USADAS NO CÓDIGO 
+heapmaxim=[]
+A DECLARAÇÃO DA LISTA VAZIA
+heapq.heapify(heapmaxim)
+​O COMANDO QUE VAI TRANSFORMAR A LISTA EM UM HEAP
+def adicionapramim(valor):
+DEFINIÇÃO DA FUNÇÃO DE INSERÇÃO NO HEAP
+   inicio=time.time()
+INÍCIO DA CONTAGEM DO RELÓGIO
+   heapq.heappush(heapmaxim,valor*-1)
+AQUI O HEAP PUSH ALÉM DE VERIFICAR O PRIMEIRO NÚMERO ELE TAMBÉM ESTÁ ADICIONANDO O NÚMERO DIGITADO MULTIPLICADO POR -1, ASSIM FAZENDO COM QUE ELE FICA NA ORDEM DO HEAP MÁXIMO
+   fim=time.time()
+FIM DA CONTAGEM DO RELÓGIO 
+   print(valor,"foi adicionado no heap")
+   print("tempo:",inicio-fim)
+  
+def removeai(valor):
+DEFINIÇÃO DA REMOÇÃO NO HEAP
+   inicio=time.time()
+   heapq.heappop(heapmaxim)
+HEAPPOP EXCLUINDO O PRIMEIRO DO HEAP 
+   fim=time.time()
+FIM DA CONTAGEM DO RELÓGIO
+   print(valor,"removido(s) com sucesso") 
+   print("tempo:",inicio-fim)
+
+FILA
+import time
+BIBLIOTECA QUE VAI SER USADA NO CÓDIGO
+fila = []
+CRIANDO A LISTA VAZIA
+def removeai(valor):
+DEFINIÇÃO DA REMOÇÃO NA FILA
+   inicio = time.time()
+INÍCIO DO RELÓGIO
+   for i in range (0,valor):
+       del(fila[0])
+UM LAÇO FOR PARA O NÚMERO DE EXCLUSÕES SER RODADO E DELETANDO AQUELES NO ÍNDICE ZERO
+   fim = time.time()
+FIM DO RELÓGIO
+   print(valor,"removido(s) com sucesso")
+   print ("time:",fim-inicio)
+def adicionapramim(valor):
+DEFINIÇÃO DA INSERÇÃO NA FILA
+   inicio = time.time()
+INÍCIO DO RELÓGIO 
+   fila.append(valor)
+O APPEND FUNCIONA ADICIONANDO O NÚMERO SEMPRE NA ÚLTIMA POSIÇÃO DA FILA
+   fim = time.time()
+FIM DO RELÓGIO
+   print(valor,"foi adicionado a fila")
+   print ("time:",fim-inicio)
+
+PILHA
+import time
+BIBLIOTECA QUE VAI SER USADA NO CÓDIGO
+pilha = []
+DECLARAÇÃO DA LISTA VAZIA
+def adicionapramim(valor):
+DEFINIÇÃO DA INSERÇÃO NA PILHA
+   inicio = time.time()
+INICIO DO RELÓGIO
+   pilha.append(valor)
+APPEND VAI ADICIONAR O VALOR NO ÚLTIMO LOCAL DA PILHA
+   fim = time.time()
+FIM DO RELÓGIO
+   print(valor,"foi adicionado a pilha")
+def removeai(valor):
+DEFINIÇÃO DA REMOÇÃO NA PILHA
+   inicio = time.time()
+INICIO DO RELÓGIO
+   for i in range (0,valor):
+       pilha.pop()
+LAÇO FOR ENTRA COM O VALOR DE NUMEROS A SEREM REMOVIDOS E O POP RETIRA O ÚLTIMO VALOR QUE FOI COLOCADO NA PILHA
+   fim = time.time()
+FIM DO RELÓGIO
+   print(valor,"removido(s) com sucesso")
+   print ("time:",fim-inicio)
