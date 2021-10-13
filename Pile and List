@@ -1,0 +1,31 @@
+PILHA
+import time
+pilha = []
+def adicionapramim(valor):
+   inicio = time.time()
+   pilha.append(valor)
+   fim = time.time()
+   print(valor,"foi adicionado a pilha")
+def removeai(valor):
+   inicio = time.time()
+   for i in range (0,valor):
+       pilha.pop()
+   fim = time.time()
+   print(valor,"removido(s) com sucesso")
+   print ("time:",fim-inicio)
+FILA
+import time
+fila = []
+def removeai(valor):
+   inicio = time.time()
+   for i in range (0,valor):
+       del(fila[0])
+   fim = time.time()
+   print(valor,"removido(s) com sucesso")
+   print ("time:",fim-inicio)
+def adicionapramim(valor):
+   inicio = time.time()
+   fila.append(valor)
+   fim = time.time()
+   print(valor,"foi adicionado a fila")
+   print ("time:",fim-inicio)
